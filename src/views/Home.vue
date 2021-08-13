@@ -1,18 +1,16 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <transition name="fade">
+    <div class="home"></div>  
+  </transition>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
+<style lang="scss" scoped>
+.home{
+  height: 100vh;
+  background-color: black;
 }
-</script>
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+</style>

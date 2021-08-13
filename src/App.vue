@@ -1,32 +1,46 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <vue-page-transition name="fade-in-left">
+    <router-view />
+  </vue-page-transition>  
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+export default {
+  data(){
+    return{
+      slide: 0,
+    }
+  },
+  mounted() {
+    var route = this.$router.currentRoute.path;
+    this.slide = route.substring(1);
+    window.addEventListener("keydown", e => {
+      if(e.key === "ArrowRight"){
+        this.slide++;
+        this.$router.push("/" + this.slide);
+      }
+      if(e.key === "ArrowLeft"){
+        this.slide--;
+        if(this.slide < 0) {this.slide = 0; return}
+        this.$router.push("/" + this.slide);
+      }
+    });
+  },
+  computed:{
+    getName(){
+      return this.animations[this.slide];
     }
   }
+}
+</script>
+
+<style>
+.slide{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 </style>
