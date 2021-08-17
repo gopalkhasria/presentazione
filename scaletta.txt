@@ -1,0 +1,7 @@
+storia,
+Dove viene usata (google e esterno)
+Caratteristiche go (sintassi paragonata agli altri linguaggi, pulizia automatica memoria, la concorrenza, import relativi come stanadr, Libreria estesta di go)
+Performance go (compilazione, esecuzione ...),
+Assenza di uso generics,
+Orientata agli oggetti solo parzialmente (parlare di sta cosa)
+Programmi ( da decidere )

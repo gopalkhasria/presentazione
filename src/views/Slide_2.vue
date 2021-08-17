@@ -18,11 +18,16 @@
                 <span>EFFICENTE</span>
             </div>
         </div>
+        <div class="history">
+            <history />
+        </div>
     </div>
 </template>
 
 <script>
+import History from '../components/History.vue'
 export default {
+  components: { History },
     name:"Slide2",
 }
 </script>
