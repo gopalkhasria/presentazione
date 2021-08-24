@@ -39,7 +39,7 @@ export default {
     name:"Slide2",
     data(){
         return{
-            history: false
+            history: true
         }
     }
 }
