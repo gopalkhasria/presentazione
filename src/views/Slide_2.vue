@@ -20,7 +20,8 @@
         </div>
         <transition name="fade">
             <div class="history" v-if="history">
-                <history />
+                <history :increment="increment" v-if="state == '1'" />
+                <companies :decrement="decrement" v-if="state == '2'" />
             </div>
         </transition>
         <div class="question" @click="history = !history" v-if="!history">
@@ -30,13 +31,23 @@
 </template>
 
 <script>
+import Companies from '../components/Companies.vue';
 import History from '../components/History.vue'
 export default {
-  components: { History },
+  components: { History, Companies },
     name:"Slide2",
     data(){
         return{
-            history: true
+            history: true,
+            state: 2,
+        }
+    },
+    methods:{
+        increment(){
+            this.state++;
+        },
+        decrement(){
+            this.state--;
         }
     }
 }

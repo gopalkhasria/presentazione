@@ -2,7 +2,7 @@
     <div class="wrapper">
         <div class="head">
             UN PO DI STORIA
-            <span>Chi lo usa ?</span>
+            <span @click="increment">Chi lo usa ?</span>
         </div>
         <div class="foto-wrap">
             <img src="../assets/images/author.png" alt="Author">
@@ -25,6 +25,7 @@
 <script>
 export default {
     name:"History",
+    props: [ "increment" ],
 }
 </script>
 

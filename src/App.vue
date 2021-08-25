@@ -35,6 +35,9 @@ export default {
 </script>
 
 <style>
+*{
+  user-select: none;
+}
 .slide{
     display: flex;
     flex-direction: column;
