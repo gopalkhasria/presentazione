@@ -26,9 +26,6 @@
         <div class="question" @click="history = !history" v-if="!history">
             <img src="../assets/images/question.svg" alt="question" width="50px">
         </div>
-        <div class="question" @click="history = !history" v-else>
-            <img src="../assets/images/cancel.svg" alt="cancel" width="50px">
-        </div>
     </div>
 </template>
 
