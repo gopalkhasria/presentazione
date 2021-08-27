@@ -83,13 +83,14 @@
                 </div>
             </div>
         </div>
+        <div class="button" @click="close">Chiudi</div>
     </div>
 </template>
 
 <script>
 export default {
     name: "Companies",
-    props: ["decrement"],
+    props: ["decrement", "close"],
     methods: {
         hide(id) {
             document.getElementById("logo"+ id ).style.display = "none";
@@ -170,5 +171,16 @@ export default {
     100%{
         opacity: 0;
     }
+}
+.button {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
 }
 </style>

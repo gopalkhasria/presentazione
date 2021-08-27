@@ -19,13 +19,14 @@
             <span>Marzo 28, 2012: Prima release di go</span>
             <span>Agosto 16, 2021:  Ultima release di go (versione 1.7) </span>
         </div>
+        <div class="button" @click="close">Chiudi</div>
     </div>
 </template>
 
 <script>
 export default {
     name:"History",
-    props: [ "increment" ],
+    props: [ "increment", "close" ],
 }
 </script>
 
@@ -33,6 +34,8 @@ export default {
 .wrapper{
     border-radius: .3rem;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
 
     .head{
         font-size: 1rem;
@@ -77,6 +80,18 @@ export default {
         border-radius: .5rem;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     }
+}
+
+.button {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 </style>

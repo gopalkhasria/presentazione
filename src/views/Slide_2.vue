@@ -20,8 +20,8 @@
         </div>
         <transition name="fade">
             <div class="history" v-if="history">
-                <history :increment="increment" v-if="state == '1'" />
-                <companies :decrement="decrement" v-if="state == '2'" />
+                <history :increment="increment" v-if="state == '1'" :close="close"/>
+                <companies :decrement="decrement" v-if="state == '2'" :close="close"/>
             </div>
         </transition>
         <div class="question" @click="history = !history" v-if="!history">
@@ -38,8 +38,8 @@ export default {
     name:"Slide2",
     data(){
         return{
-            history: true,
-            state: 2,
+            history: false,
+            state: 1,
         }
     },
     methods:{
@@ -48,6 +48,9 @@ export default {
         },
         decrement(){
             this.state--;
+        },
+        close(){
+            this.history = this.history = false;
         }
     }
 }
