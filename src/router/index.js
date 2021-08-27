@@ -27,7 +27,6 @@ const routes = [
     path: '/2',
     name: 'Slide2',
     component: Slide2,
-    meta: { transition: 'zoom' },
   },
 ]
 
