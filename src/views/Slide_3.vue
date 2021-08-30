@@ -7,18 +7,26 @@
         >
       </section>
       <div class="cards">
-        <binaries />
+        <ArrowRight />
+          <binaries v-if="false"/>
+          <Library v-if="false"/>
+          <Management />
+        <ArrowLeft />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import binaries from "@/components/Binaries.vue"
+import binaries from "@/components/slide3/Binaries.vue"
+import Management from "@/components/slide3/Management.vue"
+import Library from "@/components/slide3/Library.vue"
+import ArrowRight from "@/components/ArrowRight.vue"
+import ArrowLeft from "@/components/ArrowLeft.vue"
 export default {
   name: "Slide3",
   components:{
-    binaries
+    binaries,ArrowRight, ArrowLeft,Library,Management
   },
   data(){
       return{
