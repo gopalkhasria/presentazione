@@ -6,13 +6,20 @@
           >Perchè devo usarlo?</a
         >
       </section>
+      <div class="cards">
+        <binaries />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import binaries from "@/components/Binaries.vue"
 export default {
   name: "Slide3",
+  components:{
+    binaries
+  },
   data(){
       return{
           showBtn: false,
@@ -157,4 +164,12 @@ a {
     clip: rect(0px, 450px, 0px, 0px);
   }
 }
+
+.cards{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 </style>
