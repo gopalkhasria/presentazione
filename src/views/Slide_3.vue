@@ -10,7 +10,8 @@
         <ArrowRight />
           <binaries v-if="false"/>
           <Library v-if="false"/>
-          <Management />
+          <Management v-if="false"/>
+          <Variable />
         <ArrowLeft />
       </div>
     </div>
@@ -20,13 +21,14 @@
 <script>
 import binaries from "@/components/slide3/Binaries.vue"
 import Management from "@/components/slide3/Management.vue"
+import Variable from "@/components/slide3/Variable.vue"
 import Library from "@/components/slide3/Library.vue"
 import ArrowRight from "@/components/ArrowRight.vue"
 import ArrowLeft from "@/components/ArrowLeft.vue"
 export default {
   name: "Slide3",
   components:{
-    binaries,ArrowRight, ArrowLeft,Library,Management
+    binaries,ArrowRight, ArrowLeft,Library,Management, Variable
   },
   data(){
       return{
