@@ -11,7 +11,9 @@
           <binaries v-if="false"/>
           <Library v-if="false"/>
           <Management v-if="false"/>
-          <Variable />
+          <Variable v-if="false" />
+          <Concurrency v-if="false"/>
+          <Garbage />
         <ArrowLeft />
       </div>
     </div>
@@ -22,13 +24,15 @@
 import binaries from "@/components/slide3/Binaries.vue"
 import Management from "@/components/slide3/Management.vue"
 import Variable from "@/components/slide3/Variable.vue"
+import Concurrency from "@/components/slide3/Concurrency.vue"
+import Garbage from "@/components/slide3/Garbage.vue"
 import Library from "@/components/slide3/Library.vue"
 import ArrowRight from "@/components/ArrowRight.vue"
 import ArrowLeft from "@/components/ArrowLeft.vue"
 export default {
   name: "Slide3",
   components:{
-    binaries,ArrowRight, ArrowLeft,Library,Management, Variable
+    binaries,ArrowRight, ArrowLeft,Library,Management, Variable,Concurrency,Garbage
   },
   data(){
       return{
