@@ -5,6 +5,7 @@ import Redirect from '../views/Redirect.vue'
 import Slide1 from '../views/Slide_1.vue'
 import Slide2 from '../views/Slide_2.vue'
 import Slide3 from '../views/Slide_3.vue'
+import Slide4 from '../views/Slide_4.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/3',
     name: 'Slide3',
     component: Slide3,
+  },
+  {
+    path: '/4',
+    name: 'Slide4',
+    component: Slide4,
   },
 ]
 
