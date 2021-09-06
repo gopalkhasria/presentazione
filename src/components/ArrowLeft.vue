@@ -1,8 +1,14 @@
 <template>
-    <div class="arrow arrow--right">
-        <span>Next</span>
+    <div class="arrow arrow--right" @click="inc">
+        <span style="margin-top: 5px;">Next</span>
     </div>
 </template>
+
+<script>
+export default {
+  props:["inc"]
+}
+</script>
 
 <style lang="scss">
 .arrow {

@@ -7,14 +7,14 @@
         >
       </section>
       <div class="cards">
-        <ArrowRight />
-          <binaries v-if="false"/>
-          <Library v-if="false"/>
-          <Management v-if="false"/>
-          <Variable v-if="false" />
-          <Concurrency v-if="false"/>
-          <Garbage />
-        <ArrowLeft />
+        <ArrowRight :dec="decrement"/>
+          <binaries v-if="canShow(1)" />
+          <Library v-if="canShow(2)" />
+          <Management v-if="canShow(3)" />
+          <Variable v-if="canShow(4)" />
+          <Concurrency v-if="canShow(5)" />
+          <Garbage v-if="canShow(6)" />
+        <ArrowLeft :inc="increment"/>
       </div>
     </div>
   </div>
@@ -37,7 +37,17 @@ export default {
   data(){
       return{
           showBtn: false,
+          counter: 1,
       }
+  },
+  methods:{
+    canShow(count){
+      var res = false
+      this.counter == count ? res = true : res = false;
+      return res;
+    },
+    increment(){ if(this.counter < 6){ this.counter++;} },
+    decrement(){ if(this.counter > 1){ this.counter--;} }
   }
 };
 </script>

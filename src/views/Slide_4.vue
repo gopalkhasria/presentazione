@@ -7,12 +7,12 @@
         >
       </section>
       <div class="cards">
-        <ArrowRight />
-            <Young v-if="false"/>
-            <Binaries v-if="false"/>
-            <Generics v-if="false"/>
-            <Errori />
-        <ArrowLeft />
+        <ArrowRight :dec="decrement"/>
+            <Young v-if="canShow(1)" />
+            <Binaries v-if="canShow(2)" />
+            <Generics v-if="canShow(3)" />
+            <Errori v-if="canShow(4)" />
+        <ArrowLeft :inc="increment"/>
       </div>
     </div>
   </div>
@@ -33,7 +33,17 @@ export default {
   data(){
       return{
           showBtn: false,
+          counter: 1,
       }
+  },
+  methods:{
+    canShow(count){
+      var res = false
+      this.counter == count ? res = true : res = false;
+      return res;
+    },
+    increment(){ if(this.counter < 4){ this.counter++;} },
+    decrement(){ if(this.counter > 1){ this.counter--;} }
   }
 };
 </script>

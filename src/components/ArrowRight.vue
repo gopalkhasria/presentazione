@@ -1,8 +1,14 @@
 <template>
-    <div class="arrow arrow--left">
-        <span>Prev</span>
+    <div class="arrow arrow--left" @click="dec">
+        <span style="margin-top: 5px;">Prev</span>
     </div>
 </template>
+
+<script>
+export default {
+  props:["dec"]
+}
+</script>
 
 <style lang="scss">
 .arrow {
