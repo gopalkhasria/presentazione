@@ -17,7 +17,7 @@
         <div class="dates">
             <span>November 10, 2009</span>
             <span>Marzo 28, 2012: Prima release di go</span>
-            <span>Agosto 16, 2021:  Ultima release di go (versione 1.7) </span>
+            <span>Agosto 16, 2021:  Ultima release di go (versione 1.17) </span>
         </div>
         <div class="button" @click="close">Chiudi</div>
     </div>
