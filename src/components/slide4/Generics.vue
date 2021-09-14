@@ -44,7 +44,7 @@
     justify-content: center;
 
     img{
-        width: 300px;
+        width: 500px;
     }
 }
 

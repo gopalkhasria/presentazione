@@ -1,14 +1,10 @@
 <template>
     <div class="bin">
-        <span class="title">Gestione errori</span>
-        <div class="body">
-            <div class="spec">
-                <img src="@/assets/images/slide4/try-catch.jpg" alt="try catch">
-            </div>
-            <div class="spec">
-                <img src="@/assets/images/slide4/goerror.png" alt="go error">
-            </div>
-        </div>
+        <ul>
+            <li><span class="title">Moderno, ma non innovativo</span></li>
+            <li><span class="title">Garbage collector</span></li>
+            <li><span class="title">Alcuni elementi vanno contro le logiche di costruzione dei linguaggi che puntano alla sicurezza </span></li>
+        </ul>
     </div>
 </template>
 
@@ -28,10 +24,13 @@
     span{
         margin-bottom: 2rem;
     }
-    .desc{
-        font-size: 2rem;
-        margin-top: 2rem;
+    ul{
+        margin: 2rem;
+        list-style: none;
         text-align: center;
+        li{
+            margin-bottom: 1rem;
+        }
     }
 }
 
