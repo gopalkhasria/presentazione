@@ -1,6 +1,7 @@
 <template>
     <div class="bin">
         <span class="title">Linguaggio giovane</span>
+        <span class="title">(in alcuni campi) </span>
         <div class="body">
             <div class="spec">
                 <img src="@/assets/images/slide4/teenager.svg" alt="linguaggio giovane">

@@ -5,8 +5,8 @@ import Redirect from '../views/Redirect.vue'
 import Slide1 from '../views/Slide_1.vue'
 import Slide2 from '../views/Slide_2.vue'
 import Slide3 from '../views/Slide_3.vue'
-//import Slide4 from '../views/Slide_4.vue'
-//import Slide5 from '../views/Slide_5.vue'
+import Slide4 from '../views/Slide_4.vue'
+import Slide5 from '../views/Slide_5.vue'
 import Storia from  '../views/Storia.vue'
 import Problemi from '../views/Problemi.vue'
 
@@ -47,6 +47,16 @@ const routes = [
     path: '/5',
     name: 'Slide3',
     component: Slide3,
+  },
+  {
+    path: '/6',
+    name: 'Slide4',
+    component: Slide4,
+  },
+  {
+    path: '/7',
+    name: 'Slide5',
+    component: Slide5,
   },
 ]
 

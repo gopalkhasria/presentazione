@@ -1,17 +1,22 @@
 <template>
   <div>
     <div class="wrapper">
-      <section v-if="showBtn">
+      <section v-if="showBtn" @click="showBtn = false">
         <a href="#" class="testing" data-text="BUY TICKETS"
-          >Perchè dovrei evitarlo?</a
+          >Cosa non mi piace di go</a
         >
       </section>
-      <div class="cards">
+      <div class="cards" v-else>
         <ArrowRight :dec="decrement"/>
-            <Young v-if="canShow(1)" />
-            <Binaries v-if="canShow(2)" />
-            <Generics v-if="canShow(3)" />
-            <Errori v-if="canShow(4)" />
+            <transition leave-active-class="" name="rotateDownRight">
+              <Young v-if="canShow(1)" />
+            </transition>
+            <transition leave-active-class="" name="lightSpeed">
+              <Binaries v-if="canShow(2)" />
+            </transition>
+            <transition leave-active-class="" name="fadeLeft">
+              <Generics v-if="canShow(3)" />
+            </transition>
         <ArrowLeft :inc="increment"/>
       </div>
     </div>
@@ -24,15 +29,14 @@ import ArrowLeft from "@/components/ArrowLeft.vue"
 import Young from "@/components/slide4/Young.vue"
 import Binaries from "@/components/slide4/Binaries.vue"
 import Generics from "@/components/slide4/Generics.vue"
-import Errori from "@/components/slide4/Errori.vue"
 export default {
   name: "Slide4",
   components:{
-    ArrowRight, ArrowLeft, Young, Binaries, Generics, Errori
+    ArrowRight, ArrowLeft, Young, Binaries, Generics,
   },
   data(){
       return{
-          showBtn: false,
+          showBtn: true,
           counter: 1,
       }
   },
@@ -42,7 +46,7 @@ export default {
       this.counter == count ? res = true : res = false;
       return res;
     },
-    increment(){ if(this.counter < 4){ this.counter++;} },
+    increment(){ if(this.counter < 3){ this.counter++;} },
     decrement(){ if(this.counter > 1){ this.counter--;} }
   }
 };

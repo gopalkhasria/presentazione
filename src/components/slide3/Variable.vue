@@ -2,7 +2,7 @@
     <div class="bin">
         <span class="title">Variabili tipizzate</span>
         <span class="desc">
-            string, int, boolean, double, slices, channels, <span>rune</span> ...
+            string, int, boolean, float32/64, slices, channels, <span>rune</span> ...
         </span>
     </div>
 </template>
