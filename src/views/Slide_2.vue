@@ -1,21 +1,25 @@
 <template>
     <div class="slide">
         <div class="title">
-            <span>Linguaggio  di programmazione</span> 
-            <span>Open Source</span>
+            <span>Linguaggio  di programmazione</span>
+            <span>general purpose</span>
         </div>
         <div class="property .flip-2-hor-top-1">
             <div>
-                <img src="../assets/images/simple.svg" alt="simple">
-                <span>SEMPLICE</span>
+                <img src="../assets/images/open-source.svg" alt="simple">
+                <span>OPEN SOURCE</span>
             </div>
             <div>
-                <img src="../assets/images/reliable.svg" alt="affidabile">
-                <span>AFFIDABILI</span>
+                <img src="../assets/images/reliable.svg" alt="simple">
+                <span>COMPATTO</span>
+            </div>
+            <div>
+                <img src="../assets/images/simple.svg" alt="affidabile">
+                <span>COMPRENSIBILE</span>
             </div>
             <div>
                 <img src="../assets/images/efficent.svg" alt="efficent">
-                <span>EFFICENTE</span>
+                <span>VELOCE</span>
             </div>
         </div>
         <transition name="fade">

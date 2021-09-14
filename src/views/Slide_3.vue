@@ -1,19 +1,31 @@
 <template>
   <div>
     <div class="wrapper">
-      <section v-if="showBtn">
+      <section v-if="showBtn" @click="showBtn = false">
         <a href="#" class="testing" data-text="BUY TICKETS"
           >Perchè devo usarlo?</a
         >
       </section>
-      <div class="cards">
+      <div class="cards" v-else>
         <ArrowRight :dec="decrement"/>
-          <binaries v-if="canShow(1)" />
-          <Library v-if="canShow(2)" />
-          <Management v-if="canShow(3)" />
-          <Variable v-if="canShow(4)" />
-          <Concurrency v-if="canShow(5)" />
-          <Garbage v-if="canShow(6)" />
+          <transition name="zoomUp" leave-active-class="">
+            <binaries v-if="canShow(1)" />
+          </transition>
+          <transition name="flip" leave-active-class="">
+            <Library v-if="canShow(2)" />
+          </transition>
+          <transition leave-active-class="" name="flipX">
+            <Management v-if="canShow(3)" />
+          </transition>
+          <transition leave-active-class="" name="flipY">
+            <Variable v-if="canShow(4)" />
+          </transition>
+          <transition leave-active-class="" name="slideLeft">
+            <Concurrency v-if="canShow(5)" />
+          </transition>
+          <transition leave-active-class="" name="flip">
+            <Garbage v-if="canShow(6)" />
+          </transition>
         <ArrowLeft :inc="increment"/>
       </div>
     </div>
@@ -36,7 +48,7 @@ export default {
   },
   data(){
       return{
-          showBtn: false,
+          showBtn: true,
           counter: 1,
       }
   },
