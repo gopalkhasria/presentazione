@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Redirect from '../views/Redirect.vue'
-import Slide1 from '../views/Slide_1.vue'
+import Gopher from '../components/gopher.vue'
 import Slide2 from '../views/Slide_2.vue'
 import Slide3 from '../views/Slide_3.vue'
 import Slide4 from '../views/Slide_4.vue'
@@ -25,23 +25,23 @@ const routes = [
   },
   {
     path: '/1',
-    name: 'Slide1',
-    component: Slide1,
-  },
-  {
-    path: '/2',
     name: 'Storia',
     component: Storia,
   },
   {
-    path: '/3',
+    path: '/2',
     name: 'Problemi',
     component: Problemi,
   },
   {
-    path: '/4',
+    path: '/3',
     name: 'Slide2',
     component: Slide2,
+  },
+  {
+    path: '/4',
+    name: 'Gopher',
+    component: Gopher,
   },
   {
     path: '/5',
