@@ -7,6 +7,7 @@ import Slide2 from '../views/Slide_2.vue'
 import Slide3 from '../views/Slide_3.vue'
 import Slide4 from '../views/Slide_4.vue'
 import Slide5 from '../views/Slide_5.vue'
+import Slide1 from '../views/Slide_1.vue'
 import Storia from  '../views/Storia.vue'
 import Problemi from '../views/Problemi.vue'
 
@@ -22,6 +23,11 @@ const routes = [
     path: '/',
     name: 'Redirect',
     component: Redirect
+  },
+  {
+    path: '/0',
+    name: 'Slide1',
+    component: Slide1
   },
   {
     path: '/1',

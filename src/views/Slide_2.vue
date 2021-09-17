@@ -2,7 +2,6 @@
     <div class="slide">
         <div class="title">
             <span>Linguaggio  di programmazione</span>
-            <span>general purpose</span>
         </div>
         <div class="property .flip-2-hor-top-1">
             <div>
